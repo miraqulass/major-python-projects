@@ -76,6 +76,7 @@ def loop_song():
 root = Tk()
 root.resizable(0, 0)
 root.title("Music Player")
+root.configure(background="black")
 
 mixer.init()
 
@@ -85,38 +86,40 @@ playlist = Listbox(
     bg="black",
     fg="white",
     font=("Helvetica", 12),
-    width=50,
+    width=70,
     height=20,
 )
-playlist.grid(row=1, columnspan=6, padx=10, pady=10)
+playlist.grid(row=1, columnspan=9, padx=10, pady=10)
 
-browsebtn = Button(root, text="Browse", command=browse_file, bg="blue", fg="white")
+browsebtn = Button(root, text="Browse", command=browse_file, bg="goldenrod", fg="white")
 browsebtn.grid(row=0, column=0, padx=5, pady=5)
 
-playbtn = Button(root, text="Play", command=play, bg="yellow", fg="blue")
+playbtn = Button(root, text="Play", command=play, bg="goldenrod", fg="white")
 playbtn.grid(row=0, column=1, padx=5, pady=5)
 
-pausebtn = Button(root, text="Pause", command=pause, bg="yellow", fg="red")
+pausebtn = Button(root, text="Pause", command=pause, bg="goldenrod", fg="white")
 pausebtn.grid(row=0, column=2, padx=5, pady=5)
 
-resumebtn = Button(root, text="Resume", command=resume, bg="yellow", fg="green")
+resumebtn = Button(root, text="Resume", command=resume, bg="goldenrod", fg="white")
 resumebtn.grid(row=0, column=3, padx=5, pady=5)
 
-stopbtn = Button(root, text="Stop", command=stop, bg="red", fg="black")
+stopbtn = Button(root, text="Stop", command=stop, bg="goldenrod", fg="white")
 stopbtn.grid(row=0, column=4, padx=5, pady=5)
 
-prevbtn = Button(root, text="Previous", command=previous_song, bg="orange", fg="white")
+prevbtn = Button(
+    root, text="Previous", command=previous_song, bg="goldenrod", fg="white"
+)
 prevbtn.grid(row=0, column=5, padx=5, pady=5)
 
-nextbtn = Button(root, text="Next", command=next_song, bg="orange", fg="white")
+nextbtn = Button(root, text="Next", command=next_song, bg="goldenrod", fg="white")
 nextbtn.grid(row=0, column=6, padx=5, pady=5)
 
 shufflebtn = Button(
-    root, text="Shuffle", command=shuffle_songs, bg="purple", fg="white"
+    root, text="Shuffle", command=shuffle_songs, bg="goldenrod", fg="white"
 )
 shufflebtn.grid(row=0, column=7, padx=5, pady=5)
 
-loopbtn = Button(root, text="Loop", command=loop_song, bg="green", fg="white")
+loopbtn = Button(root, text="Loop", command=loop_song, bg="goldenrod", fg="white")
 loopbtn.grid(row=0, column=8, padx=5, pady=5)
 
 mainloop()
